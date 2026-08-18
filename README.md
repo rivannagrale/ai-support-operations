@@ -1,32 +1,148 @@
 # AI Support Operations
 
-A knowledge-assisted AI customer support operations dashboard built with Node.js, Express, vanilla JavaScript, and Gemini.
+A production-style AI-powered customer support operations console for classifying, analyzing, resolving, and routing support tickets.
+
+## Overview
+
+AI Support Operations is a full-stack support agent dashboard designed to demonstrate how AI-assisted customer support workflows can be organized into a practical operations console.
+
+The application allows support agents to:
+
+- Authenticate securely
+- Submit customer support tickets
+- Classify tickets automatically
+- Generate customer-facing responses
+- Identify ticket risk
+- Recommend human escalation
+- Track operational metrics
+- Review ticket history
+- Search and filter tickets
+- Export ticket data
+- Review escalated tickets
+- Switch between light and dark themes
+- Use keyboard shortcuts
+- Use the dashboard on mobile devices
 
 ## Features
 
-- AI ticket classification and customer response generation
-- Knowledge-base retrieval with relevance scoring
-- Automatic resolution vs human escalation
-- Human review queue and resolution workflow
-- Persistent JSON ticket storage
-- Live operational analytics
-- Ticket search and status/category filters
+### Authentication
+
+- Environment-based admin credentials
+- Session-based authentication
+- Protected API routes
+- Login rate limiting
+- Secure logout
+- Session expiration
+
+### AI Ticket Analysis
+
+Tickets are analyzed and classified into categories such as:
+
+- Authentication
+- Billing
+- Technical
+- How-to
+
+The analysis provides:
+
+- Category
+- Confidence
+- Risk level
+- Response time
+- Knowledge usage
+- Customer response
+- Escalation recommendation
+- Ticket ID
+
+### Operations Dashboard
+
+The dashboard provides real-time operational information including:
+
+- Tickets processed
+- Automated tickets
+- Escalated tickets
+- Automation rate
+- Resolution rate
+- Escalation rate
+- Average response time
+- Pending work
+- Category distribution
+
+### Human Review
+
+Tickets requiring human attention are placed into a review queue.
+
+Agents can open ticket details and review customer requests before taking action.
+
+### Ticket History
+
+The application provides:
+
+- Ticket history
+- Search
+- Status filtering
+- Category filtering
+- Refresh
 - CSV export
-- Admin authentication and protected APIs
-- Responsive SaaS-style dashboard
-- Health endpoint for deployment checks
 
-## Local setup
+### UI
 
-1. Install Node.js 18+.
-2. Copy `.env.example` to `.env`.
-3. Add your Gemini API key and choose an admin username/password.
-4. Run `npm install`.
-5. Run `npm start`.
-6. Open `http://localhost:3000`.
+- Responsive design
+- Mobile support
+- Light mode
+- Dark mode
+- Keyboard shortcuts
+- Accessible interface elements
+- Clean operations-console layout
 
-Do not commit `.env` or API keys.
+## Tech Stack
 
-## Production notes
+### Frontend
 
-This project uses an in-memory session store and JSON files for persistence. For a real production deployment, replace those with a managed database and persistent session/auth infrastructure, add rate limiting, HTTPS, audit logs, and a proper secrets manager.
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+
+- Node.js
+- Express.js
+
+### AI
+
+- Google Gemini API
+
+### Testing
+
+- Playwright
+- Chromium
+- Automated regression testing
+
+### Development
+
+- Git
+- GitHub
+- VS Code
+
+## Project Structure
+
+```text
+ai-support-agent/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── server.js
+├── knowledge-base.json
+├── tickets.json
+│
+├── tests/
+│   └── support-agent.spec.js
+│
+├── package.json
+├── package-lock.json
+├── playwright.config.js
+├── README.md
+└── .gitignore
+```
