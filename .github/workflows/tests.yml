@@ -33,6 +33,7 @@ jobs:
         env:
           ADMIN_USERNAME: Rivan
           ADMIN_PASSWORD: ${{ secrets.SUPPORT_AGENT_PASSWORD }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PORT: 3000
           HOST: 0.0.0.0
         run: |
@@ -46,7 +47,7 @@ jobs:
             sleep 1
           done
 
-            - name: Run Playwright tests
+      - name: Run Playwright tests
         env:
           SUPPORT_AGENT_PASSWORD: ${{ secrets.SUPPORT_AGENT_PASSWORD }}
           TEST_PASSWORD: ${{ secrets.SUPPORT_AGENT_PASSWORD }}
