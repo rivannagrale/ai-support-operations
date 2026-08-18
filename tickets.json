@@ -1,0 +1,923 @@
+[
+  {
+    "id": "T-1787083211949",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details and try again. Let us know if you continue to experience issues.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 978,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T20:00:11.949Z",
+    "resolvedAt": "2026-08-18T20:00:11.949Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787083209677",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please first verify your login details and check whether there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1054,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T20:00:09.677Z",
+    "resolvedAt": "2026-08-18T20:00:09.678Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787082752423",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please first verify your login details and check whether there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1317,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:52:32.423Z",
+    "resolvedAt": "2026-08-18T19:52:32.423Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787082752040",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details and check if there are any current login issues. Let us know if you need further help!",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1174,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:52:32.040Z",
+    "resolvedAt": "2026-08-18T19:52:32.040Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787082658305",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details. If the problem continues, let us know.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1068,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:50:58.305Z",
+    "resolvedAt": "2026-08-18T19:50:58.305Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787082657834",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details and try again. If the issue continues, please let us know.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1114,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:50:57.835Z",
+    "resolvedAt": "2026-08-18T19:50:57.835Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787081769835",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details and try again. Let us know if you continue to experience issues.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1051,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:36:09.835Z",
+    "resolvedAt": "2026-08-18T19:36:09.835Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787081769475",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check if there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1286,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:36:09.475Z",
+    "resolvedAt": "2026-08-18T19:36:09.475Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787081248849",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check if there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 963,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:27:28.849Z",
+    "resolvedAt": "2026-08-18T19:27:28.849Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787081248372",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details. If the issue continues, please let us know.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1195,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:27:28.372Z",
+    "resolvedAt": "2026-08-18T19:27:28.372Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787081116044",
+    "ticket": "Someone hacked my account and changed my email address. I cannot access my account.",
+    "category": "Authentication",
+    "confidence": 50,
+    "risk": "High",
+    "answer": "For login problems, first verify your login details and check whether there is a known authentication incident.",
+    "escalate": true,
+    "status": "Pending",
+    "responseTime": 1199,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 8
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:25:16.044Z",
+    "resolvedAt": null,
+    "resolvedBy": null
+  },
+  {
+    "id": "T-1787081013927",
+    "ticket": "I was charged twice for the same order and need a refund for the duplicate payment.",
+    "category": "Billing",
+    "confidence": 100,
+    "risk": "Medium",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Pending",
+    "responseTime": 1151,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 17
+      }
+    ],
+    "createdAt": "2026-08-18T19:23:33.927Z",
+    "resolvedAt": null,
+    "resolvedBy": null
+  },
+  {
+    "id": "T-1787080558245",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check whether there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1343,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:15:58.245Z",
+    "resolvedAt": "2026-08-18T19:15:58.245Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787080557468",
+    "ticket": "I cannot log in to my account.",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check if there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1030,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 9
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:15:57.468Z",
+    "resolvedAt": "2026-08-18T19:15:57.468Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787080426095",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and let us know if the issue persists so we can assist further.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1093,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:13:46.095Z",
+    "resolvedAt": "2026-08-18T19:13:46.096Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787080265510",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "Please verify your login details and ensure you are using the correct password.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1087,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:11:05.510Z",
+    "resolvedAt": "2026-08-18T19:11:05.510Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787080083681",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check whether there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1088,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:08:03.681Z",
+    "resolvedAt": "2026-08-18T19:08:03.681Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787079965974",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please first verify your login details and let us know if the issue persists.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1372,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:06:05.974Z",
+    "resolvedAt": "2026-08-18T19:06:05.974Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787079729829",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details. If the issue continues, please reach out so we can look into it.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1156,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T19:02:09.829Z",
+    "resolvedAt": "2026-08-18T19:02:09.829Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787079561376",
+    "ticket": "I cannot log in to my account because my password is being rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1126,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 13
+      },
+      {
+        "topic": "Unexpected charge",
+        "category": "Billing",
+        "score": 1
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T18:59:21.376Z",
+    "resolvedAt": "2026-08-18T18:59:21.376Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787077106138",
+    "ticket": "why cant i log in?",
+    "category": "Authentication",
+    "confidence": 90,
+    "risk": "Low",
+    "answer": "For login problems, please first verify your login details and check if there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1096,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Integration problems"
+    ],
+    "knowledgeScores": [
+      {
+        "topic": "Login problems",
+        "category": "Authentication",
+        "score": 5
+      },
+      {
+        "topic": "Integration problems",
+        "category": "Technical",
+        "score": 1
+      }
+    ],
+    "createdAt": "2026-08-18T18:18:26.138Z",
+    "resolvedAt": "2026-08-18T18:18:26.138Z",
+    "resolvedBy": "AI"
+  },
+  {
+    "id": "T-1787076181102",
+    "ticket": "What is my name?",
+    "category": "Unknown",
+    "confidence": 100,
+    "risk": "Low",
+    "answer": "I do not have access to your personal information. Let me connect you with a support team member who can help.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1161,
+    "retrievedKnowledge": [],
+    "knowledgeScores": [],
+    "createdAt": "2026-08-18T18:03:01.102Z",
+    "resolvedAt": "2026-08-18T18:39:22.881Z",
+    "resolvedBy": "Human"
+  },
+  {
+    "id": "T-1787075510862",
+    "ticket": "The moon disappeared from my backyard and my toaster is speaking French.",
+    "category": "Unknown",
+    "confidence": 100,
+    "risk": "Low",
+    "answer": "I am not sure how to help with that, so I have escalated your request to a support specialist who can assist you further.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1580,
+    "retrievedKnowledge": [],
+    "createdAt": "2026-08-18T17:51:50.862Z",
+    "resolvedAt": "2026-08-18T18:02:11.851Z",
+    "resolvedBy": "Human"
+  },
+  {
+    "id": "T-1787075491601",
+    "ticket": "I was charged twice for my subscription and I need a full refund immediately.",
+    "category": "Billing",
+    "confidence": 100,
+    "risk": "High",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1587,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T17:51:31.601Z",
+    "resolvedAt": "2026-08-18T19:25:25.130Z",
+    "resolvedBy": "Human"
+  },
+  {
+    "id": "T-1787075474968",
+    "ticket": "I can't log into my account because my password is rejected.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details and check if there is a known authentication incident. If you continue to experience issues, we are here to help!",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1710,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "createdAt": "2026-08-18T17:51:14.968Z"
+  },
+  {
+    "id": "T-1787074092605",
+    "ticket": "I was charged twice for my subscription and I want a full refund.",
+    "category": "Billing",
+    "confidence": 100,
+    "risk": "High",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1178,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T17:28:12.605Z"
+  },
+  {
+    "id": "T-1787073803333",
+    "ticket": "I was charged twice for my subscription and I want a full refund.",
+    "category": "Billing",
+    "confidence": 100,
+    "risk": "High",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1149,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T17:23:23.333Z"
+  },
+  {
+    "id": "T-1787073759261",
+    "ticket": "I cannot log in to my account because my password is not working.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please first verify your login details and check if there is a known authentication incident.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1178,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge",
+      "Integration problems"
+    ],
+    "createdAt": "2026-08-18T17:22:39.261Z"
+  },
+  {
+    "id": "T-1787060348881",
+    "ticket": "dont know",
+    "category": "Unknown",
+    "confidence": 100,
+    "risk": "Low",
+    "answer": "It looks like we need a bit more information to help you. Let me connect you with a support specialist who can assist further.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1317,
+    "retrievedKnowledge": [
+      "Login problems"
+    ],
+    "createdAt": "2026-08-18T13:39:08.881Z"
+  },
+  {
+    "id": "T-1787058016582",
+    "ticket": "I cannot login to my account.",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details. We will check if there are any known authentication incidents affecting access.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1081,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T13:00:16.582Z"
+  },
+  {
+    "id": "T-1787057975998",
+    "ticket": "i want a full refund they have charged me twice",
+    "category": "Billing",
+    "confidence": 99,
+    "risk": "Medium",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1549,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T12:59:35.998Z"
+  },
+  {
+    "id": "T-1787057454512",
+    "ticket": "I was charged twice and need a refund",
+    "category": "Billing",
+    "confidence": 99,
+    "risk": "Medium",
+    "answer": "I'm sorry you're dealing with this billing issue. I've flagged your request for a support specialist to review. They can check your account and advise you on the appropriate next step.",
+    "escalate": true,
+    "status": "Resolved",
+    "responseTime": 1043,
+    "retrievedKnowledge": [
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T12:50:54.512Z"
+  },
+  {
+    "id": "T-1787057424765",
+    "ticket": "I cannot login to my account",
+    "category": "Authentication",
+    "confidence": 95,
+    "risk": "Low",
+    "answer": "For login problems, please verify your login details. If the issue continues, please let us know so we can check for any known authentication incidents.",
+    "escalate": false,
+    "status": "Resolved",
+    "responseTime": 1224,
+    "retrievedKnowledge": [
+      "Login problems",
+      "Unexpected charge"
+    ],
+    "createdAt": "2026-08-18T12:50:24.765Z"
+  }
+]

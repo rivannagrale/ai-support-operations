@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>AI Support Operations</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- ======================================
+       LOGIN SCREEN
+  ======================================= -->
+
+  <div
+    id="loginScreen"
+    class="login-screen"
+  >
+
+    <div class="login-card">
+
+      <p class="eyebrow">
+        AI OPERATIONS
+      </p>
+
+      <h1>
+        Support Agent
+      </h1>
+
+      <p class="login-subtitle">
+        Sign in to the support operations console.
+      </p>
+
+
+      <form id="loginForm">
+
+        <label>
+          Username
+
+          <input
+            id="usernameInput"
+            autocomplete="username"
+            required
+          >
+
+        </label>
+
+
+        <label>
+          Password
+
+          <input
+            id="passwordInput"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+
+        </label>
+
+
+        <button
+          type="submit"
+          id="loginBtn"
+        >
+          Sign in
+        </button>
+
+
+        <p
+          id="loginError"
+          class="login-error hidden"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================
+       KEYBOARD SHORTCUT OVERLAY
+  ======================================= -->
+
+  <div
+    id="shortcutOverlay"
+    class="shortcut-overlay hidden"
+  >
+
+    <div class="shortcut-modal">
+
+      <div class="shortcut-header">
+
+        <div>
+
+          <p class="label">
+            KEYBOARD
+          </p>
+
+          <h2>
+            Shortcuts
+          </h2>
+
+        </div>
+
+
+        <button
+          id="closeShortcuts"
+          class="shortcut-close"
+          type="button"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="shortcut-list">
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Analyze ticket
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Ctrl</kbd>
+
+            <span>+</span>
+
+            <kbd>Enter</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Focus ticket input
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>N</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Refresh dashboard
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Ctrl</kbd>
+
+            <span>+</span>
+
+            <kbd>R</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Show shortcuts
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>?</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Close modal
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Esc</kbd>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================
+       MAIN APPLICATION
+  ======================================= -->
+
+  <main
+    class="app hidden"
+    id="app"
+  >
+
+
+    <!-- ====================================
+         HEADER
+    ===================================== -->
+
+    <header class="header">
+
+      <div>
+
+        <p class="eyebrow">
+          AI OPERATIONS
+        </p>
+
+        <h1>
+          Support Agent
+        </h1>
+
+        <p class="subtitle">
+          Classify, resolve and route customer support tickets.
+        </p>
+
+      </div>
+
+
+      <div class="header-actions">
+
+        <button
+  id="themeToggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle dark mode"
+  title="Toggle dark mode"
+>
+  <span class="theme-sun">☀️</span>
+  <span class="theme-moon">🌙</span>
+</button>
+
+        <div class="status">
+
+          <span class="status-dot"></span>
+
+          System online
+
+        </div>
+
+
+        <button
+          id="logoutBtn"
+          class="ghost-button"
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ====================================
+         WORKSPACE
+    ===================================== -->
+
+    <section class="workspace">
+
+
+      <!-- CUSTOMER TICKET -->
+
+      <div class="card ticket-card">
+
+        <div class="card-header">
+
+          <p class="label">
+            CUSTOMER TICKET
+          </p>
+
+          <h2>
+            Submit a problem
+          </h2>
+
+        </div>
+
+
+        <textarea
+          id="ticketInput"
+          maxlength="5000"
+          placeholder="Example: I can't log in to my account. It says my password is incorrect even though I'm sure it's right."
+        ></textarea>
+
+
+        <div class="composer-footer">
+
+          <span id="charCount">
+            0 / 5000
+          </span>
+
+          <span>
+            Knowledge-assisted analysis
+          </span>
+
+        </div>
+
+
+        <button id="analyzeBtn">
+          Analyze Ticket
+        </button>
+
+      </div>
+
+
+
+      <!-- AI RESULT -->
+
+      <div class="card result-card">
+
+        <div class="card-header">
+
+          <p class="label">
+            AI ANALYSIS
+          </p>
+
+          <h2>
+            Result
+          </h2>
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+          id="emptyState"
+          class="empty-state"
+        >
+
+          <div class="empty-icon">
+            ✦
+          </div>
+
+          <p>
+            Submit a ticket to see the AI analysis.
+          </p>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div
+          id="result"
+          class="result hidden"
+        >
+
+
+          <div class="result-row">
+
+            <span>
+              Category
+            </span>
+
+            <strong id="category">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="result-row">
+
+            <span>
+              Confidence
+            </span>
+
+            <strong id="confidence">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="result-row">
+
+            <span>
+              Risk
+            </span>
+
+            <strong id="risk">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="result-row">
+
+            <span>
+              Response time
+            </span>
+
+            <strong id="responseTime">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="result-row">
+
+            <span>
+              Knowledge used
+            </span>
+
+            <strong id="knowledgeUsed">
+              —
+            </strong>
+
+          </div>
+
+
+          <div class="answer-box">
+
+            <p class="label">
+              CUSTOMER RESPONSE
+            </p>
+
+            <p id="answer"></p>
+
+          </div>
+
+
+          <div
+            id="escalation"
+            class="escalation hidden"
+          >
+            ⚠️ Human review recommended
+          </div>
+
+
+          <div class="ticket-id">
+
+            Ticket ID:
+
+            <strong id="ticketId">
+              —
+            </strong>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================
+         METRICS
+    ===================================== -->
+
+    <section class="metrics">
+
+
+      <div class="metric">
+
+        <span>
+          Tickets processed
+        </span>
+
+        <strong id="ticketsProcessed">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="metric">
+
+        <span>
+          Automated
+        </span>
+
+        <strong id="automated">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="metric">
+
+        <span>
+          Escalated
+        </span>
+
+        <strong id="escalated">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="metric">
+
+        <span>
+          Automation rate
+        </span>
+
+        <strong id="automationRate">
+          0%
+        </strong>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         PERFORMANCE ANALYTICS
+    ===================================== -->
+
+    <section class="dashboard-section">
+
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="label">
+            PERFORMANCE
+          </p>
+
+          <h2>
+            Operations analytics
+          </h2>
+
+        </div>
+
+
+        <span
+          class="section-count"
+          id="analyticsUpdated"
+        >
+          Live
+        </span>
+
+      </div>
+
+
+      <div class="analytics-grid">
+
+
+        <div class="analytics-card">
+
+          <span>
+            Resolution rate
+          </span>
+
+          <strong id="resolutionRate">
+            0%
+          </strong>
+
+          <small>
+            All tickets
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Escalation rate
+          </span>
+
+          <strong id="escalationRate">
+            0%
+          </strong>
+
+          <small>
+            Sent to humans
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Avg. response
+          </span>
+
+          <strong id="analyticsAvgTime">
+            —
+          </strong>
+
+          <small>
+            AI processing
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Pending work
+          </span>
+
+          <strong id="pendingCount">
+            0
+          </strong>
+
+          <small>
+            Needs attention
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="category-chart"
+        id="categoryChart"
+      ></div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         HUMAN REVIEW
+    ===================================== -->
+
+    <section class="dashboard-section">
+
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="label">
+            HUMAN REVIEW
+          </p>
+
+          <h2>
+            Review Queue
+          </h2>
+
+        </div>
+
+
+        <span
+          id="queueCount"
+          class="section-count"
+        >
+          0 pending
+        </span>
+
+      </div>
+
+
+      <div
+        id="reviewQueue"
+        class="review-queue"
+      >
+
+        <div class="section-empty">
+
+          <div class="empty-icon">
+            ✓
+          </div>
+
+          <p>
+            No tickets waiting for human review.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         TICKET HISTORY
+    ===================================== -->
+
+    <section class="dashboard-section">
+
+
+      <div class="section-heading history-heading">
+
+
+        <div>
+
+          <p class="label">
+            OPERATIONS
+          </p>
+
+          <h2>
+            Ticket History
+          </h2>
+
+        </div>
+
+
+        <div class="history-tools">
+
+
+          <input
+            id="historySearch"
+            class="search-input"
+            placeholder="Search tickets..."
+          >
+
+
+          <select
+            id="statusFilter"
+            class="filter-select"
+          >
+
+            <option value="all">
+              All status
+            </option>
+
+            <option value="Pending">
+              Pending
+            </option>
+
+            <option value="Resolved">
+              Resolved
+            </option>
+
+          </select>
+
+
+          <select
+            id="categoryFilter"
+            class="filter-select"
+          >
+
+            <option value="all">
+              All categories
+            </option>
+
+          </select>
+
+
+          <button
+            id="exportBtn"
+            class="secondary-button"
+          >
+            Export CSV
+          </button>
+
+
+          <button
+            id="refreshTicketsBtn"
+            class="secondary-button"
+          >
+            Refresh
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="history-card">
+
+        <div
+          id="ticketHistory"
+          class="ticket-history"
+        >
+
+          <div class="section-empty">
+
+            <p>
+              No ticket history yet.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         SYSTEM INFORMATION
+    ===================================== -->
+
+    <section class="system-info">
+
+
+      <div>
+
+        <p class="label">
+          SYSTEM
+        </p>
+
+        <strong>
+          AI Support Operations
+        </strong>
+
+        <span>
+          Knowledge-assisted ticket classification
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <p class="label">
+          AUTOMATION
+        </p>
+
+        <strong id="systemAutomation">
+          0%
+        </strong>
+
+        <span>
+          Tickets resolved without escalation
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <p class="label">
+          RESPONSE
+        </p>
+
+        <strong id="averageResponseTime">
+          —
+        </strong>
+
+        <span>
+          Average AI response time
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <p class="label">
+          KNOWLEDGE
+        </p>
+
+        <strong id="knowledgeCount">
+          0
+        </strong>
+
+        <span>
+          Approved support articles
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ======================================
+       JAVASCRIPT
+  ======================================= -->
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

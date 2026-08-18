@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Authentication",
+    "topic": "Login problems",
+    "answer": "For login problems, first verify the user's login details and check whether there is a known authentication incident. If the problem affects multiple users, investigate the authentication service."
+  },
+  {
+    "category": "Billing",
+    "topic": "Unexpected charge",
+    "answer": "Billing and refund requests should be reviewed by a support specialist before any refund or account change is made."
+  },
+  {
+    "category": "Technical",
+    "topic": "Integration problems",
+    "answer": "For integration problems, verify the connection status, authentication credentials, API responses, recent configuration changes, and relevant error logs."
+  },
+  {
+    "category": "How-to",
+    "topic": "General instructions",
+    "answer": "Provide clear, concise, step-by-step instructions using information available in the approved documentation."
+  }
+]
