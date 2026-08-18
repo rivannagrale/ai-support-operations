@@ -2,9 +2,11 @@ name: Playwright Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   test:
@@ -34,11 +36,15 @@ jobs:
           PORT: 3000
           HOST: 0.0.0.0
         run: |
-  node server.js &
-  for i in {1..30}; do
-    curl -fsS http://127.0.0.1:3000 >/dev/null && break
-    sleep 1
-  done
+          node server.js &
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:3000 > /dev/null; then
+              echo "Server is ready"
+              break
+            fi
+            echo "Waiting for server..."
+            sleep 1
+          done
 
       - name: Run Playwright tests
         env:
