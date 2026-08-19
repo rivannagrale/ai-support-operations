@@ -176,3 +176,20 @@ ai-support-operations/
 ├── playwright.config.js
 ├── README.md
 └── .gitignore
+## Screenshots
+
+### Dashboard
+
+![AI Support Operations Dashboard](screenshots/dashboard.png)
+
+### AI Ticket Analysis
+
+![AI Ticket Analysis](screenshots/ai-analysis.png)
+
+### Dark Mode
+
+![AI Support Operations Dark Mode](screenshots/dark-mode.png)
+
+### Ticket History
+
+![Ticket History](screenshots/ticket-history.png)
