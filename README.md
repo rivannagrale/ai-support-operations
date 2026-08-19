@@ -8,6 +8,8 @@
 
 **Live Application:** https://ai-support-operations-k0hp.onrender.com
 
+---
+
 ## Overview
 
 AI Support Operations is a full-stack support agent dashboard designed to demonstrate how AI-assisted customer support workflows can be organized into a practical operations console.
@@ -28,6 +30,8 @@ The application allows support agents to:
 - Switch between light and dark themes
 - Use keyboard shortcuts
 - Use the dashboard on mobile devices
+
+---
 
 ## Features
 
@@ -101,6 +105,8 @@ The application provides:
 - Accessible interface elements
 - Clean operations-console layout
 
+---
+
 ## Tech Stack
 
 ### Frontend
@@ -132,6 +138,8 @@ The application provides:
 - VS Code
 - Render
 
+---
+
 ## Automated Testing
 
 The project includes a Playwright regression suite covering:
@@ -153,6 +161,8 @@ The project includes a Playwright regression suite covering:
 
 Tests automatically run through GitHub Actions on pushes to the `main` branch.
 
+---
+
 ## Project Structure
 
 ```text
@@ -173,25 +183,14 @@ ai-support-operations/
 │   └── workflows/
 │       └── tests.yml
 │
+├── screenshots/
+│   ├── dashboard.png.png
+│   ├── ai-analysis.png.png
+│   ├── dark-mode.png.png
+│   └── ticket-history.png.png
+│
 ├── package.json
 ├── package-lock.json
 ├── playwright.config.js
 ├── README.md
 └── .gitignore
-## Screenshots
-
-### Dashboard
-
-![AI Support Operations Dashboard](screenshots/dashboard.png)
-
-### AI Ticket Analysis
-
-![AI Ticket Analysis](screenshots/ai-analysis.png)
-
-### Dark Mode
-
-![AI Support Operations Dark Mode](screenshots/dark-mode.png)
-
-### Ticket History
-
-![Ticket History](screenshots/ticket-history.png)
