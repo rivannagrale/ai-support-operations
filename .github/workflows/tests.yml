@@ -29,7 +29,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
-            - name: Start application
+      - name: Start application
         env:
           ADMIN_USERNAME: Rivan
           ADMIN_PASSWORD: ${{ secrets.SUPPORT_AGENT_PASSWORD }}
