@@ -29,7 +29,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
-      - name: Start application
+            - name: Start application
         env:
           ADMIN_USERNAME: Rivan
           ADMIN_PASSWORD: ${{ secrets.SUPPORT_AGENT_PASSWORD }}
@@ -37,15 +37,34 @@ jobs:
           PORT: 3000
           HOST: 0.0.0.0
         run: |
-          node server.js &
+          node server.js > server.log 2>&1 &
+          SERVER_PID=$!
+
+          echo "Started server with PID: $SERVER_PID"
+
           for i in {1..30}; do
             if curl -fsS http://127.0.0.1:3000 > /dev/null; then
               echo "Server is ready"
               break
             fi
-            echo "Waiting for server..."
+
+            if ! kill -0 $SERVER_PID 2>/dev/null; then
+              echo "Server process stopped unexpectedly."
+              echo "===== SERVER LOG ====="
+              cat server.log
+              exit 1
+            fi
+
+            echo "Waiting for server... ($i/30)"
             sleep 1
           done
+
+          if ! curl -fsS http://127.0.0.1:3000 > /dev/null; then
+            echo "Server failed to start."
+            echo "===== SERVER LOG ====="
+            cat server.log
+            exit 1
+          fi
 
       - name: Run Playwright tests
         env:
