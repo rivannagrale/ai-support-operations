@@ -1,8 +1,10 @@
 # AI Support Operations
 
-A production-style AI-powered customer support operations console for classifying, analyzing, resolving, and routing support tickets.
+[![Playwright Tests](https://github.com/rivannagrale/ai-support-operations/actions/workflows/tests.yml/badge.svg)](https://github.com/rivannagrale/ai-support-operations/actions/workflows/tests.yml)
 
-## 🚀 Live Demo
+> Production-style AI-powered customer support operations console for classifying, analyzing, resolving, and routing support tickets.
+
+[🚀 Live Demo](https://ai-support-operations-k0hp.onrender.com)
 
 **Live Application:** https://ai-support-operations-k0hp.onrender.com
 
