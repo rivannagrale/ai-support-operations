@@ -148,37 +148,6 @@ app.post("/api/auth/login", (req, res) => {
     expiresIn: 8 * 60 * 60
   });
 });
-const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
-const { GoogleGenAI } = require("@google/genai");
-
-dotenv.config();
-
-const app = express();
-
-const PORT = Number(process.env.PORT || 3000);
-const HOST = process.env.HOST || "0.0.0.0";
-
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY
-});
-
-const allowedOrigin =
-  process.env.ALLOWED_ORIGIN || `http://localhost:${PORT}`;
-
-app.use(
-  cors({
-    origin: allowedOrigin,
-    methods: ["GET", "POST", "PATCH", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-  })
-);
-
-app.use(express.json({ limit: "1mb" }));
 
 const knowledgeBasePath = path.join(__dirname, "knowledge-base.json");
 const ticketsPath = path.join(__dirname, "tickets.json");
