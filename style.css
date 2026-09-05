@@ -1656,3 +1656,99 @@ body:has(#ticketReviewModal) {
     padding: 20px;
   }
 }
+/* ======================================
+   LOGIN SCREEN
+====================================== */
+
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(36, 87, 197, 0.08), transparent 35%),
+    var(--bg);
+}
+
+.login-card {
+  width: min(420px, 100%);
+  padding: 36px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  margin: 8px 0 10px;
+  font-size: 34px;
+}
+
+.login-subtitle {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#loginForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dfe2e6;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+#loginForm input:focus {
+  border-color: #17181a;
+  box-shadow: 0 0 0 3px rgba(23, 24, 26, 0.06);
+}
+
+#loginBtn {
+  margin-top: 5px;
+}
+
+.login-error {
+  padding: 11px 13px;
+  border-radius: 10px;
+  background: var(--red-bg);
+  border: 1px solid #f2c5c1;
+  color: var(--red);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .login-card h1 {
+    font-size: 30px;
+  }
+}
+
