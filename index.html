@@ -1,70 +1,341 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>AI Support Operations</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
+
 
 <body>
 
-  <main class="app">
 
-    <!-- ============================= -->
-    <!-- HEADER -->
-    <!-- ============================= -->
+  <!-- ======================================
+       LOGIN SCREEN
+  ======================================= -->
+
+  <div
+    id="loginScreen"
+    class="login-screen"
+  >
+
+    <div class="login-card">
+
+      <p class="eyebrow">
+        AI OPERATIONS
+      </p>
+
+      <h1>
+        Support Agent
+      </h1>
+
+      <p class="login-subtitle">
+        Sign in to the support operations console.
+      </p>
+
+
+      <form id="loginForm">
+
+        <label>
+          Username
+
+          <input
+            id="usernameInput"
+            autocomplete="username"
+            required
+          >
+
+        </label>
+
+
+        <label>
+          Password
+
+          <input
+            id="passwordInput"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+
+        </label>
+
+
+        <button
+          type="submit"
+          id="loginBtn"
+        >
+          Sign in
+        </button>
+
+
+        <p
+          id="loginError"
+          class="login-error hidden"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================
+       KEYBOARD SHORTCUT OVERLAY
+  ======================================= -->
+
+  <div
+    id="shortcutOverlay"
+    class="shortcut-overlay hidden"
+  >
+
+    <div class="shortcut-modal">
+
+      <div class="shortcut-header">
+
+        <div>
+
+          <p class="label">
+            KEYBOARD
+          </p>
+
+          <h2>
+            Shortcuts
+          </h2>
+
+        </div>
+
+
+        <button
+          id="closeShortcuts"
+          class="shortcut-close"
+          type="button"
+        >
+          ├ù
+        </button>
+
+      </div>
+
+
+      <div class="shortcut-list">
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Analyze ticket
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Ctrl</kbd>
+
+            <span>+</span>
+
+            <kbd>Enter</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Focus ticket input
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>N</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Refresh dashboard
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Ctrl</kbd>
+
+            <span>+</span>
+
+            <kbd>R</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Show shortcuts
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>?</kbd>
+
+          </div>
+
+        </div>
+
+
+        <div class="shortcut-item">
+
+          <span>
+            Close modal
+          </span>
+
+          <div class="shortcut-keys">
+
+            <kbd>Esc</kbd>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================================
+       MAIN APPLICATION
+  ======================================= -->
+
+  <main
+    class="app hidden"
+    id="app"
+  >
+
+
+    <!-- ====================================
+         HEADER
+    ===================================== -->
 
     <header class="header">
 
       <div>
-        <p class="eyebrow">AI OPERATIONS</p>
 
-        <h1>Support Agent</h1>
+        <p class="eyebrow">
+          AI OPERATIONS
+        </p>
+
+        <h1>
+          Support Agent
+        </h1>
 
         <p class="subtitle">
           Classify, resolve and route customer support tickets.
         </p>
+
       </div>
 
-      <div class="status">
-        <span class="status-dot"></span>
-        System online
+
+      <div class="header-actions">
+
+        <button
+  id="themeToggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle dark mode"
+  title="Toggle dark mode"
+>
+  <span class="theme-sun">ÔÿÇ´©Å</span>
+  <span class="theme-moon">­ƒîÖ</span>
+</button>
+
+        <div class="status">
+
+          <span class="status-dot"></span>
+
+          System online
+
+        </div>
+
+
+        <button
+          id="logoutBtn"
+          class="ghost-button"
+        >
+          Logout
+        </button>
+
       </div>
 
     </header>
 
 
-    <!-- ============================= -->
-    <!-- MAIN WORKSPACE -->
-    <!-- ============================= -->
+
+    <!-- ====================================
+         WORKSPACE
+    ===================================== -->
 
     <section class="workspace">
 
 
-      <!-- =========================== -->
       <!-- CUSTOMER TICKET -->
-      <!-- =========================== -->
 
       <div class="card ticket-card">
 
         <div class="card-header">
 
-          <div>
-            <p class="label">CUSTOMER TICKET</p>
+          <p class="label">
+            CUSTOMER TICKET
+          </p>
 
-            <h2>Submit a problem</h2>
-          </div>
+          <h2>
+            Submit a problem
+          </h2>
 
         </div>
 
 
         <textarea
           id="ticketInput"
+          maxlength="5000"
           placeholder="Example: I can't log in to my account. It says my password is incorrect even though I'm sure it's right."
         ></textarea>
+
+
+        <div class="composer-footer">
+
+          <span id="charCount">
+            0 / 5000
+          </span>
+
+          <span>
+            Knowledge-assisted analysis
+          </span>
+
+        </div>
 
 
         <button id="analyzeBtn">
@@ -74,28 +345,34 @@
       </div>
 
 
-      <!-- =========================== -->
+
       <!-- AI RESULT -->
-      <!-- =========================== -->
 
       <div class="card result-card">
 
         <div class="card-header">
 
-          <div>
-            <p class="label">AI ANALYSIS</p>
+          <p class="label">
+            AI ANALYSIS
+          </p>
 
-            <h2>Result</h2>
-          </div>
+          <h2>
+            Result
+          </h2>
 
         </div>
 
 
-        <!-- Empty state -->
+        <!-- EMPTY STATE -->
 
-        <div id="emptyState" class="empty-state">
+        <div
+          id="emptyState"
+          class="empty-state"
+        >
 
-          <div class="empty-icon">✦</div>
+          <div class="empty-icon">
+            Ô£ª
+          </div>
 
           <p>
             Submit a ticket to see the AI analysis.
@@ -104,80 +381,78 @@
         </div>
 
 
-        <!-- Result -->
+        <!-- RESULT -->
 
-        <div id="result" class="result hidden">
+        <div
+          id="result"
+          class="result hidden"
+        >
 
-
-          <!-- Category -->
 
           <div class="result-row">
 
-            <span>Category</span>
+            <span>
+              Category
+            </span>
 
             <strong id="category">
-              —
+              ÔÇö
             </strong>
 
           </div>
 
 
-          <!-- Confidence -->
-
           <div class="result-row">
 
-            <span>Confidence</span>
+            <span>
+              Confidence
+            </span>
 
             <strong id="confidence">
-              —
+              ÔÇö
             </strong>
 
           </div>
 
 
-          <!-- Risk -->
-
           <div class="result-row">
 
-            <span>Risk</span>
+            <span>
+              Risk
+            </span>
 
             <strong id="risk">
-              —
+              ÔÇö
             </strong>
 
           </div>
 
-
-          <!-- Response time -->
 
           <div class="result-row">
 
-            <span>Response time</span>
+            <span>
+              Response time
+            </span>
 
             <strong id="responseTime">
-              —
+              ÔÇö
             </strong>
 
           </div>
 
 
-          <!-- Knowledge source -->
+          <div class="result-row">
 
-          <div
-            id="knowledgeRow"
-            class="result-row"
-          >
-
-            <span>Knowledge used</span>
+            <span>
+              Knowledge used
+            </span>
 
             <strong id="knowledgeUsed">
-              —
+              ÔÇö
             </strong>
 
           </div>
 
-
-          <!-- Customer response -->
 
           <div class="answer-box">
 
@@ -190,26 +465,20 @@
           </div>
 
 
-          <!-- Escalation -->
-
           <div
             id="escalation"
             class="escalation hidden"
           >
-            ⚠️ Human review recommended
+            ÔÜá´©Å Human review recommended
           </div>
 
 
-          <!-- Ticket ID -->
-
-          <div
-            id="ticketIdRow"
-            class="ticket-id"
-          >
+          <div class="ticket-id">
 
             Ticket ID:
+
             <strong id="ticketId">
-              —
+              ÔÇö
             </strong>
 
           </div>
@@ -222,9 +491,10 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- METRICS -->
-    <!-- ============================= -->
+
+    <!-- ====================================
+         METRICS
+    ===================================== -->
 
     <section class="metrics">
 
@@ -284,11 +554,129 @@
     </section>
 
 
-    <!-- ============================= -->
-    <!-- HUMAN REVIEW QUEUE -->
-    <!-- ============================= -->
+
+    <!-- ====================================
+         PERFORMANCE ANALYTICS
+    ===================================== -->
 
     <section class="dashboard-section">
+
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="label">
+            PERFORMANCE
+          </p>
+
+          <h2>
+            Operations analytics
+          </h2>
+
+        </div>
+
+
+        <span
+          class="section-count"
+          id="analyticsUpdated"
+        >
+          Live
+        </span>
+
+      </div>
+
+
+      <div class="analytics-grid">
+
+
+        <div class="analytics-card">
+
+          <span>
+            Resolution rate
+          </span>
+
+          <strong id="resolutionRate">
+            0%
+          </strong>
+
+          <small>
+            All tickets
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Escalation rate
+          </span>
+
+          <strong id="escalationRate">
+            0%
+          </strong>
+
+          <small>
+            Sent to humans
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Avg. response
+          </span>
+
+          <strong id="analyticsAvgTime">
+            ÔÇö
+          </strong>
+
+          <small>
+            AI processing
+          </small>
+
+        </div>
+
+
+        <div class="analytics-card">
+
+          <span>
+            Pending work
+          </span>
+
+          <strong id="pendingCount">
+            0
+          </strong>
+
+          <small>
+            Needs attention
+          </small>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="category-chart"
+        id="categoryChart"
+      ></div>
+
+
+    </section>
+
+
+
+    <!-- ====================================
+         HUMAN REVIEW
+    ===================================== -->
+
+    <section class="dashboard-section">
+
 
       <div class="section-heading">
 
@@ -303,6 +691,7 @@
           </h2>
 
         </div>
+
 
         <span
           id="queueCount"
@@ -322,7 +711,7 @@
         <div class="section-empty">
 
           <div class="empty-icon">
-            ✓
+            Ô£ô
           </div>
 
           <p>
@@ -333,16 +722,20 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- ============================= -->
-    <!-- TICKET HISTORY -->
-    <!-- ============================= -->
+
+    <!-- ====================================
+         TICKET HISTORY
+    ===================================== -->
 
     <section class="dashboard-section">
 
-      <div class="section-heading">
+
+      <div class="section-heading history-heading">
+
 
         <div>
 
@@ -356,12 +749,67 @@
 
         </div>
 
-        <button
-          id="refreshTicketsBtn"
-          class="secondary-button"
-        >
-          Refresh
-        </button>
+
+        <div class="history-tools">
+
+
+          <input
+            id="historySearch"
+            class="search-input"
+            placeholder="Search tickets..."
+          >
+
+
+          <select
+            id="statusFilter"
+            class="filter-select"
+          >
+
+            <option value="all">
+              All status
+            </option>
+
+            <option value="Pending">
+              Pending
+            </option>
+
+            <option value="Resolved">
+              Resolved
+            </option>
+
+          </select>
+
+
+          <select
+            id="categoryFilter"
+            class="filter-select"
+          >
+
+            <option value="all">
+              All categories
+            </option>
+
+          </select>
+
+
+          <button
+            id="exportBtn"
+            class="secondary-button"
+          >
+            Export CSV
+          </button>
+
+
+          <button
+            id="refreshTicketsBtn"
+            class="secondary-button"
+          >
+            Refresh
+          </button>
+
+
+        </div>
+
 
       </div>
 
@@ -385,14 +833,17 @@
 
       </div>
 
+
     </section>
 
 
-    <!-- ============================= -->
-    <!-- SYSTEM INFORMATION -->
-    <!-- ============================= -->
+
+    <!-- ====================================
+         SYSTEM INFORMATION
+    ===================================== -->
 
     <section class="system-info">
+
 
       <div>
 
@@ -435,7 +886,7 @@
         </p>
 
         <strong id="averageResponseTime">
-          —
+          ÔÇö
         </strong>
 
         <span>
@@ -444,17 +895,38 @@
 
       </div>
 
+
+      <div>
+
+        <p class="label">
+          KNOWLEDGE
+        </p>
+
+        <strong id="knowledgeCount">
+          0
+        </strong>
+
+        <span>
+          Approved support articles
+        </span>
+
+      </div>
+
+
     </section>
 
 
   </main>
 
 
-  <!-- ============================= -->
-  <!-- JAVASCRIPT -->
-  <!-- ============================= -->
+
+  <!-- ======================================
+       JAVASCRIPT
+  ======================================= -->
 
   <script src="script.js"></script>
 
+
 </body>
+
 </html>
