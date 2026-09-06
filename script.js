@@ -125,12 +125,12 @@ async function analyzeTicket() {
   try {
     const data = await api("/api/analyze", { method: "POST", body: JSON.stringify({ ticket }) });
     category.textContent = data.category || "Unknown";
-    confidence.textContent = data.confidence !== undefined ? `${data.confidence}%` : "ÔÇö";
+    confidence.textContent = data.confidence !== undefined ? `${data.confidence}%` : "—";
     risk.textContent = data.risk || "Unknown";
     answer.textContent = data.answer || "No response available.";
-    responseTime.textContent = data.responseTime !== undefined ? `${data.responseTime} ms` : "ÔÇö";
+    responseTime.textContent = data.responseTime !== undefined ? `${data.responseTime} ms` : "—";
     knowledgeUsed.textContent = data.retrievedKnowledge?.length ? data.retrievedKnowledge.join(", ") : "None";
-    ticketId.textContent = data.ticketId || "ÔÇö";
+    ticketId.textContent = data.ticketId || "—";
     emptyState.classList.add("hidden");
     result.classList.remove("hidden");
     escalation.classList.toggle("hidden", !data.escalate);
@@ -167,13 +167,13 @@ function updateStats(a) {
   escalated.textContent = a.escalated;
   automationRate.textContent = `${a.automationRate}%`;
   systemAutomation.textContent = `${a.automationRate}%`;
-  averageResponseTime.textContent = a.averageResponseTime ? `${a.averageResponseTime} ms` : "ÔÇö";
+  averageResponseTime.textContent = a.averageResponseTime ? `${a.averageResponseTime} ms` : "—";
 }
 
 function renderAnalytics(a) {
   $("resolutionRate").textContent = `${a.resolutionRate}%`;
   $("escalationRate").textContent = `${a.escalationRate}%`;
-  $("analyticsAvgTime").textContent = a.averageResponseTime ? `${a.averageResponseTime} ms` : "ÔÇö";
+  $("analyticsAvgTime").textContent = a.averageResponseTime ? `${a.averageResponseTime} ms` : "—";
   $("pendingCount").textContent = a.pending;
   const total = Object.values(a.categories).reduce((x, y) => x + y, 0) || 1;
   $("categoryChart").innerHTML = Object.entries(a.categories).map(([name, count]) => `
@@ -225,7 +225,7 @@ function renderReviewQueue(tickets) {
   const pending = tickets.filter(t => t.escalate === true && t.status !== "Resolved");
   queueCount.textContent = `${pending.length} pending`;
   if (!pending.length) {
-    reviewQueue.innerHTML = `<div class="section-empty"><div class="empty-icon">Ô£ô</div><p>No tickets waiting for human review.</p></div>`;
+    reviewQueue.innerHTML = `<div class="section-empty"><div class="empty-icon">✓</div><p>No tickets waiting for human review.</p></div>`;
     return;
   }
   reviewQueue.innerHTML = pending.map(createReviewTicket).join("");
@@ -261,7 +261,7 @@ function showReviewModal(ticket) {
   const modal = document.createElement("div");
   modal.id = "ticketReviewModal";
   modal.innerHTML = `<div class="review-modal-overlay"><div class="review-modal">
-    <div class="review-modal-header"><div><p class="label">HUMAN REVIEW</p><h2>Ticket Details</h2></div><button class="modal-close" onclick="closeReviewModal()">├ù</button></div>
+    <div class="review-modal-header"><div><p class="label">HUMAN REVIEW</p><h2>Ticket Details</h2></div><button class="modal-close" onclick="closeReviewModal()">×</button></div>
     <div class="modal-ticket-id">${escapeHTML(ticket.id)}</div>
     <div class="modal-section"><p class="label">CUSTOMER TICKET</p><div class="modal-ticket-text">${escapeHTML(ticket.ticket)}</div></div>
     <div class="modal-grid">
@@ -533,7 +533,7 @@ document.addEventListener(
 );
 
 // ======================================
-// ­ƒîÖ DARK / LIGHT MODE
+// ☾ DARK / LIGHT MODE
 // ======================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -570,11 +570,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(
       darkMode
-        ? "­ƒîÖ Dark mode ON"
-        : "ÔÿÇ´©Å Light mode ON"
+        ? "☾ Dark mode ON"
+        : "☀ Light mode ON"
     );
 
   });
 
 });
+
 
